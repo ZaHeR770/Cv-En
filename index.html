@@ -1,0 +1,2961 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#070e1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Mahmoud Mohamed Ibrahim Zaher • Executive IT & Infrastructure Portfolio</title>
+  
+  <!-- Modern Executive Google Fonts: Plus Jakarta Sans, Outfit, Space Grotesk, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       ROYAL ACADEMIC EXECUTIVE DESIGN SYSTEM (Modern, Sleek & Inspiring)
+       ========================================================================== */
+    :root {
+      --bg-deep: #060b17;
+      --bg-surface: #0a1329;
+      --bg-card: #0f1c3a;
+      --bg-card-hover: #15274f;
+      --bg-glass: rgba(13, 25, 51, 0.90);
+      --bg-glass-modal: #081124;
+
+      --gold-primary: #d4af37;
+      --gold-light: #fbe082;
+      --gold-bright: #f5c542;
+      --gold-dark: #997920;
+      --gold-gradient: linear-gradient(135deg, #fbe082 0%, #d4af37 50%, #b8860b 100%);
+      --gold-border: rgba(212, 175, 55, 0.35);
+      --gold-border-hover: rgba(245, 197, 66, 0.85);
+
+      --sapphire-accent: #2563eb;
+      --sapphire-glow: rgba(37, 99, 235, 0.35);
+      --emerald-accent: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.35);
+      --drive-accent: #34a853;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --text-gold: #fde047;
+      --text-gold-light: #fef08a;
+
+      --shadow-royal: 0 16px 45px -8px rgba(0, 0, 0, 0.85), 0 0 25px rgba(212, 175, 55, 0.14);
+      --shadow-card-hover: 0 24px 55px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.3);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      padding-left: env(safe-area-inset-left, 0px);
+      padding-right: env(safe-area-inset-right, 0px);
+    }
+
+    /* Ambient Gold Light Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1.2px, transparent 1.2px);
+      background-size: 38px 38px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .app-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 28px 24px 85px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================================================
+       ROYAL ACADEMIC EXECUTIVE HEADER
+       ========================================================================== */
+    .royal-header {
+      background: var(--bg-glass);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-xl);
+      padding: 42px 36px 34px 36px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-royal);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .royal-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold-gradient);
+    }
+
+    .header-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Candidate Photo Container */
+    .avatar-wrapper {
+      position: relative;
+      width: 136px;
+      height: 136px;
+      margin: 0 auto 20px auto;
+    }
+
+    .candidate-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid var(--gold-primary);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+      background: #0f1c3a;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .candidate-avatar:hover {
+      transform: scale(1.04);
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 40px rgba(245, 197, 66, 0.6);
+    }
+
+    .candidate-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.7rem;
+      font-weight: 900;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .candidate-subtitle {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #93c5fd;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .candidate-titles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .title-pill {
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      color: #bfdbfe;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .title-pill.gold {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--gold-border);
+      color: var(--gold-light);
+    }
+
+    .title-pill.emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+    }
+
+    /* Contacts Bar */
+    .contacts-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 18px 24px;
+      padding: 16px 22px;
+      background: rgba(10, 19, 41, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .contact-item:hover {
+      color: var(--gold-bright);
+    }
+
+    .contact-item svg {
+      width: 17px;
+      height: 17px;
+      min-width: 17px;
+      min-height: 17px;
+      fill: var(--gold-primary);
+    }
+
+    /* Action Toolbar */
+    .action-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-royal {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      background: var(--gold-gradient);
+      color: #060b17;
+      font-weight: 800;
+      font-size: 0.92rem;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.32);
+      text-decoration: none;
+      min-height: 44px;
+      font-family: inherit;
+    }
+
+    .btn-royal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5);
+      filter: brightness(1.08);
+    }
+
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--gold-border);
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      min-height: 44px;
+      font-family: inherit;
+    }
+
+    .btn-glass:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--gold-bright);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-drive-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: rgba(52, 168, 83, 0.15);
+      border: 1px solid rgba(52, 168, 83, 0.45);
+      color: #86efac;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      min-height: 44px;
+    }
+
+    .btn-drive-main:hover {
+      background: #34a853;
+      color: #060b17;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       EXECUTIVE KPI COUNTERS ROW
+       ========================================================================== */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .kpi-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-border-hover);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .kpi-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background: var(--gold-gradient);
+      opacity: 0.7;
+    }
+
+    .kpi-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .kpi-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.2px;
+    }
+
+    /* ==========================================================================
+       CATEGORY FILTERS & LIVE SEARCH
+       ========================================================================== */
+    .nav-search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 26px;
+      padding: 16px 20px;
+      background: var(--bg-surface);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: var(--radius-md);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold-gradient);
+      color: #060b17;
+      border-color: var(--gold-primary);
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.35);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+      flex: 1;
+      max-width: 380px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 18px 10px 40px;
+      background: rgba(6, 11, 23, 0.85);
+      border: 1px solid var(--gold-border);
+      border-radius: 25px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      outline: none;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      fill: var(--gold-primary);
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       THE 15 CARDS GRID (Modern, Clean, Expressive Icons)
+       ========================================================================== */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 22px;
+    }
+
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+    }
+
+    .section-card:hover {
+      transform: translateY(-5px);
+      background: var(--bg-card-hover);
+      border-color: var(--gold-border-hover);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
+      border-radius: 14px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+      font-size: 1.55rem;
+    }
+
+    .section-card:hover .card-icon-wrap {
+      background: var(--gold-gradient);
+      border-color: transparent;
+      transform: scale(1.08);
+    }
+
+    .card-num-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      padding: 4px 10px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--gold-border);
+      border-radius: 8px;
+    }
+
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .card-subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+      line-height: 1.55;
+      flex-grow: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .tag-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* CARD ACTION BUTTONS */
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .card-btn {
+      flex: 1;
+      min-height: 44px;
+      padding: 10px 16px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-weight: 800;
+      font-size: 0.88rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+    }
+
+    .card-btn:hover {
+      background: var(--gold-gradient);
+      color: #060b17;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+    }
+
+    .card-drive-btn {
+      min-height: 44px;
+      padding: 10px 14px;
+      background: rgba(52, 168, 83, 0.12);
+      border: 1px solid rgba(52, 168, 83, 0.4);
+      color: #86efac;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: var(--transition);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .card-drive-btn:hover {
+      background: #34a853;
+      color: #060b17;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       ROYAL MODAL SYSTEM (English Interactive Drawers)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 16, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-container {
+      background: var(--bg-glass-modal);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 900px;
+      max-height: 88vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: var(--shadow-card-hover), 0 0 60px rgba(0, 0, 0, 0.95);
+      position: relative;
+      transform: scale(0.95) translateY(15px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 34px 30px;
+    }
+
+    .modal-overlay.active .modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .modal-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .modal-icon-wrap {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
+      border-radius: 12px;
+      background: var(--gold-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.6rem;
+    }
+
+    .modal-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    .modal-subtitle {
+      font-size: 0.92rem;
+      color: var(--gold-light);
+      letter-spacing: 0.3px;
+    }
+
+    .modal-close-btn {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--gold-gradient);
+      color: #060b17;
+      border-color: transparent;
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Modal Component Blocks */
+    .detail-card {
+      background: rgba(15, 28, 58, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 18px;
+      transition: var(--transition);
+    }
+
+    .detail-card:hover {
+      border-color: var(--gold-border);
+      background: rgba(21, 39, 78, 0.75);
+    }
+
+    .detail-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .detail-role {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+
+    .detail-org {
+      color: #93c5fd;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .detail-date {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .detail-bullets {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    .detail-bullets li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+
+    .detail-bullets li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold-primary);
+      font-size: 0.85rem;
+    }
+
+    /* Google Drive Official Dossier Banner Inside Modals */
+    .modal-drive-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 20px;
+      background: rgba(52, 168, 83, 0.12);
+      border: 1px solid rgba(52, 168, 83, 0.35);
+      border-radius: var(--radius-md);
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .modal-drive-banner-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #86efac;
+    }
+
+    .btn-drive-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      background: #34a853;
+      color: #060b17;
+      font-weight: 800;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: var(--transition);
+      min-height: 40px;
+    }
+
+    .btn-drive-action:hover {
+      background: #4ade80;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(52, 168, 83, 0.45);
+    }
+
+    /* Verification Badge Link */
+    .verify-badge-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.4);
+      color: #93c5fd;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      margin-top: 6px;
+      margin-right: 6px;
+    }
+
+    .verify-badge-link:hover {
+      background: #2563eb;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .verify-badge-link.google {
+      background: rgba(234, 67, 53, 0.12);
+      border-color: rgba(234, 67, 53, 0.4);
+      color: #fca5a5;
+    }
+
+    .verify-badge-link.google:hover {
+      background: #ea4335;
+      color: #ffffff;
+    }
+
+    /* Skill Matrix Progress Bars */
+    .skill-bar-wrap {
+      margin-bottom: 14px;
+    }
+
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .skill-progress-bg {
+      height: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-progress-fill {
+      height: 100%;
+      background: var(--gold-gradient);
+      border-radius: 10px;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--gold-gradient);
+      color: #060b17;
+      font-weight: 800;
+      padding: 12px 28px;
+      border-radius: 30px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       ATS MODAL PREVIEW & PRINT STYLES (Clean English Layout)
+       ========================================================================== */
+    .ats-cv-document {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #1a1d23;
+      background: #ffffff;
+      text-align: left;
+    }
+
+    .ats-cv-document h1 {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1d23;
+      margin: 0 0 4px;
+      letter-spacing: -0.3px;
+    }
+
+    .ats-cv-document .title-line {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1e4d8c;
+      margin-bottom: 8px;
+    }
+
+    .ats-cv-document .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 12px;
+      color: #5a6072;
+      margin-bottom: 18px;
+    }
+
+    .ats-cv-document .cv-header {
+      border-left: 4px solid #1e4d8c;
+      padding-left: 16px;
+      margin-bottom: 22px;
+    }
+
+    .ats-cv-document .section-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #1e4d8c;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-bottom: 1.5px solid #d0d6e0;
+      padding-bottom: 4px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+
+    .ats-cv-document .summary {
+      font-size: 13px;
+      line-height: 1.65;
+      background: #f7f8fa;
+      border-left: 3px solid #1e4d8c;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 14px;
+    }
+
+    .ats-cv-document .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .ats-cv-document .kw {
+      display: inline-block;
+      background: #edf2fb;
+      color: #1e4d8c;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .ats-cv-document .job {
+      margin-bottom: 14px;
+    }
+
+    .ats-cv-document .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .ats-cv-document .job-title {
+      font-weight: 700;
+      font-size: 13px;
+      color: #1a1d23;
+    }
+
+    .ats-cv-document .job-company {
+      font-size: 12px;
+      color: #1e4d8c;
+      font-weight: 600;
+    }
+
+    .ats-cv-document .job-period {
+      font-size: 11px;
+      color: #5a6072;
+      font-weight: 500;
+      background: #f7f8fa;
+      border: 1px solid #e2e6eb;
+      padding: 2px 8px;
+      border-radius: 8px;
+    }
+
+    .ats-cv-document ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .ats-cv-document li {
+      font-size: 12.5px;
+      margin-bottom: 3px;
+      color: #1a1d23;
+      line-height: 1.55;
+    }
+
+    .ats-cv-document li strong {
+      color: #1e4d8c;
+    }
+
+    .ats-cv-document .project-item {
+      background: #f7f8fa;
+      border-left: 3px solid #1e4d8c;
+      padding: 8px 12px;
+      border-radius: 0 5px 5px 0;
+      margin-bottom: 6px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .ats-cv-document .project-item strong {
+      display: block;
+      color: #1a1d23;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .ats-cv-document .skills-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .ats-cv-document .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .ats-cv-document .edu-item .degree {
+      font-weight: 700;
+      font-size: 12.5px;
+      color: #1a1d23;
+    }
+
+    .ats-cv-document .edu-item .meta {
+      font-size: 11.5px;
+      color: #5a6072;
+    }
+
+    /* Print View */
+    #atsPrintView {
+      display: none;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #1a1d23 !important;
+        padding: 0 !important;
+      }
+      body::before { display: none !important; }
+      .app-wrapper, .modal-overlay, .toast-msg { display: none !important; }
+      #atsPrintView {
+        display: block !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .no-print { display: none !important; }
+      .ats-cv-document { font-size: 10.5pt !important; }
+      .ats-cv-document .job, .ats-cv-document .edu-item { page-break-inside: avoid; }
+      a { color: inherit !important; text-decoration: none !important; }
+    }
+
+    /* Responsive Mobile Adjustments */
+    @media (max-width: 768px) {
+      .app-wrapper { padding: 16px 14px 60px 14px; }
+      .royal-header { padding: 30px 18px 24px 18px; }
+      .candidate-name { font-size: 2rem; }
+      .candidate-subtitle { font-size: 1rem; }
+      .contacts-bar { flex-direction: column; gap: 10px; align-items: flex-start; }
+      .sections-grid { grid-template-columns: 1fr; }
+      .modal-container { padding: 22px 16px; }
+      .modal-title { font-size: 1.3rem; }
+      .modal-subtitle { font-size: 0.85rem; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .search-box { max-width: 100%; min-width: 100%; }
+      .ats-cv-document .skills-two { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- ==========================================================================
+         TOP ROYAL ACADEMIC EXECUTIVE HEADER
+         ========================================================================== -->
+    <header class="royal-header">
+      <div class="header-top-badge">
+        <span>⭐</span>
+        <span>Executive IT &amp; Infrastructure Portfolio • Kingdom of Saudi Arabia 2026</span>
+      </div>
+
+      <!-- Candidate Profile Photo -->
+      <div class="avatar-wrapper">
+        <img src="https://yourimageshare.com/ib/820URLMA3K.jpg" 
+             alt="Mahmoud Mohamed Ibrahim Zaher" 
+             class="candidate-avatar"
+             onerror="this.onerror=null; this.src='https://yourimageshare.com/ib/820URLMA3K.jpg';">
+      </div>
+
+      <h1 class="candidate-name">Mahmoud Mohamed Ibrahim Zaher</h1>
+      <div class="candidate-subtitle">Senior Technical Support Engineer | Network &amp; Infrastructure Specialist | Enterprise Risk (ISO 31000)</div>
+
+      <div class="candidate-titles">
+        <span class="title-pill gold">Senior IT Support Specialist</span>
+        <span class="title-pill">Data Center &amp; Infrastructure Operations</span>
+        <span class="title-pill emerald">IT Governance &amp; Risk (ISO 31000 / ISO 20000)</span>
+        <span class="title-pill">M.Sc. Candidate in Software Engineering (Cairo Univ - FGSSR)</span>
+      </div>
+
+      <!-- Contact Bar -->
+      <div class="contacts-bar">
+        <a href="tel:+966565907242" class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          <span>+966 56 590 7242</span>
+        </a>
+        <a href="mailto:Mxz770@gmail.com" class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Mxz770@gmail.com</span>
+        </a>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Rafha, Northern Borders, Saudi Arabia</span>
+        </div>
+        <a href="https://linkedin.com/in/mahmoud-zaher" target="_blank" class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.77a1.62 1.62 0 100 3.24 1.62 1.62 0 000-3.24z"/></svg>
+          <span>linkedin.com/in/mahmoud-zaher</span>
+        </a>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          <span>Valid Residency: 2301779076 (Egyptian)</span>
+        </div>
+      </div>
+
+      <!-- Action Toolbar -->
+      <div class="action-toolbar">
+        <button class="btn-royal" onclick="window.print()">
+          <span>💾</span>
+          <span>Download / Print ATS Resume (PDF)</span>
+        </button>
+        <button class="btn-glass" onclick="openAtsModal()">
+          <span>📄</span>
+          <span>Preview Clean ATS CV</span>
+        </button>
+        <button class="btn-glass" onclick="copyContact()">
+          <span>📋</span>
+          <span>Copy Contact Info</span>
+        </button>
+        <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8" target="_blank" class="btn-drive-main">
+          <span>🌐</span>
+          <span>Public Google Skills Profile (15 Badges)</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       EXECUTIVE KPI COUNTERS ROW
+       ========================================================================== -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">+15</div>
+        <div class="kpi-label">Years Enterprise &amp; Academic Experience</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">+500</div>
+        <div class="kpi-label">Managed Endpoints &amp; Workstations</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">19</div>
+        <div class="kpi-label">Computer Labs &amp; Testing Centers</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">24/7</div>
+        <div class="kpi-label">Data Center High-Availability &amp; SLA</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">+45</div>
+        <div class="kpi-label">Global Accreditations &amp; Certificates</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">ABET</div>
+        <div class="kpi-label">NCAAA &amp; ABET Quality Assurance Contributor</div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CATEGORY FILTERS & LIVE SEARCH
+       ========================================================================== -->
+    <div class="nav-search-bar">
+      <div class="filter-pills">
+        <button class="filter-btn active" onclick="filterCards('all')">All Sections (15)</button>
+        <button class="filter-btn" onclick="filterCards('exp')">Experience &amp; Projects</button>
+        <button class="filter-btn" onclick="filterCards('gov')">Governance &amp; AI</button>
+        <button class="filter-btn" onclick="filterCards('tech')">Network, Security &amp; Ops</button>
+        <button class="filter-btn" onclick="filterCards('edu')">Academia &amp; Community</button>
+      </div>
+
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search skills, certifications, keywords..." onkeyup="searchCards()">
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       THE 15 CARDS GRID (100% English, Polished, Themed Icons)
+       ========================================================================== -->
+    <main class="sections-grid" id="sectionsGrid">
+
+      <!-- CARD 01 -->
+      <article class="section-card" data-cat="exp">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">👤</div>
+            <span class="card-num-badge">01</span>
+          </div>
+          <h2 class="card-title">Executive Profile &amp; Summary</h2>
+          <div class="card-subtitle">Strategic Leadership &amp; Overview</div>
+          <p class="card-desc">Comprehensive leadership overview summarizing 15+ years of managing academic IT operations, 24/7 Data Center availability, and strict SLA compliance.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Executive Summary</span>
+            <span class="tag-badge">Core Competencies</span>
+            <span class="tag-badge">ATS Keywords</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-1')">
+            <span>📄</span>
+            <span>View Executive Profile</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- CARD 02 -->
+      <article class="section-card" data-cat="exp">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">💼</div>
+            <span class="card-num-badge">02</span>
+          </div>
+          <h2 class="card-title">Chronological Work Experience</h2>
+          <div class="card-subtitle">Proven Career Track Record</div>
+          <p class="card-desc">Detailed progression across World Development Co. (Northern Border Univ project), El-Ajou Group Trading, and Retaj Al-Shamal Electronics.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Namaa World</span>
+            <span class="tag-badge">El-Ajou Group</span>
+            <span class="tag-badge">Retaj Al-Shamal</span>
+            <span class="tag-badge">Northern Border Univ</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-2')">
+            <span>📋</span>
+            <span>Career Details</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1y4tml0blhkW8_60m_qL25ZhQcfnq1qVn/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Experience Letters on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 03 -->
+      <article class="section-card" data-cat="exp">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🏗️</div>
+            <span class="card-num-badge">03</span>
+          </div>
+          <h2 class="card-title">Major Technical Projects</h2>
+          <div class="card-subtitle">Infrastructure &amp; Cabling Deployments</div>
+          <p class="card-desc">Execution of the 22-point structured cabling project (Cat6/Patch Panels), Video Conferencing rooms commissioning, and modernization of 19 labs.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Structured Cabling</span>
+            <span class="tag-badge">VC Rooms</span>
+            <span class="tag-badge">Smart Classrooms</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-3')">
+            <span>⚙️</span>
+            <span>Explore Key Projects</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- CARD 04 -->
+      <article class="section-card" data-cat="gov">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🛡️</div>
+            <span class="card-num-badge">04</span>
+          </div>
+          <h2 class="card-title">IT Governance &amp; Risk Management</h2>
+          <div class="card-subtitle">ISO 31000 &amp; ISO 20000 Compliance</div>
+          <p class="card-desc">ISO 31000 Enterprise Risk Management certified by MCIT / RMBCC (8 CPD Hours), and ISO 20000-1 IT Service Management certified by TÜV NORD / FAHSS.</p>
+          <div class="card-tags">
+            <span class="tag-badge">ISO 31000</span>
+            <span class="tag-badge">ISO 20000-1</span>
+            <span class="tag-badge">CPD Accredited</span>
+            <span class="tag-badge">MCIT</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-4')">
+            <span>🏅</span>
+            <span>View ISO Credentials</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1aQJXgR6ItCTLSYu_olmfeFK2ZpchGF03/view?usp=sharing" target="_blank" class="card-drive-btn" title="View ISO Certificates on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 05 -->
+      <article class="section-card" data-cat="gov">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🤖</div>
+            <span class="card-num-badge">05</span>
+          </div>
+          <h2 class="card-title">AI Fluency, Security &amp; MLOps Hub</h2>
+          <div class="card-subtitle">15 Google Cloud Badges &amp; IBM AI Suite</div>
+          <p class="card-desc">15 official Google Cloud skill badges including Model Armor: Securing AI Deployments, Responsible AI, and MLOps, paired with IBM AI Fluency Pathway (4 microcredentials).</p>
+          <div class="card-tags">
+            <span class="tag-badge">15 Google Cloud Badges</span>
+            <span class="tag-badge">Model Armor</span>
+            <span class="tag-badge">MLOps</span>
+            <span class="tag-badge">IBM SkillsBuild</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-5')">
+            <span>✨</span>
+            <span>View AI &amp; MLOps Suite</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1ShhYtRQ1JJNHXnnO5pKxQ4F6XGRIh7AH/view?usp=sharing" target="_blank" class="card-drive-btn" title="View AI Documents on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 06 -->
+      <article class="section-card" data-cat="gov">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">📋</div>
+            <span class="card-num-badge">06</span>
+          </div>
+          <h2 class="card-title">Agile &amp; Scrum Methodologies</h2>
+          <div class="card-subtitle">IBM SkillsBuild Project Frameworks</div>
+          <p class="card-desc">Comprehensive Agile project management suite: Scrum Master mastery, Kanban workflow optimization, Lean frameworks, and Extreme Programming (XP).</p>
+          <div class="card-tags">
+            <span class="tag-badge">Agile at IBM</span>
+            <span class="tag-badge">Scrum Master</span>
+            <span class="tag-badge">Kanban</span>
+            <span class="tag-badge">Lean</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-6')">
+            <span>⚡</span>
+            <span>Explore Agile Suite</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1p91vuny-hXUq8lZ0tlfvGIbYG1cIi82s/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Agile Certificates on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 07 -->
+      <article class="section-card" data-cat="gov">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🏛️</div>
+            <span class="card-num-badge">07</span>
+          </div>
+          <h2 class="card-title">Digital Government Authority (DGA)</h2>
+          <div class="card-subtitle">Public Sector Digital Capabilities</div>
+          <p class="card-desc">National Digital Academy credentials (Qudurat.tk): Digital Leadership &amp; Innovation, Digital Trust &amp; Identity, Government AI, and Design Thinking.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Qudurat.tk</span>
+            <span class="tag-badge">Digital Identity</span>
+            <span class="tag-badge">Public Sector Leadership</span>
+            <span class="tag-badge">Design Thinking</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-7')">
+            <span>📜</span>
+            <span>View DGA Badges</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1oFSSThr-2k9hOPkD5pZY90c9dZOcw7BK/view?usp=sharing" target="_blank" class="card-drive-btn" title="View DGA Certificates on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 08 -->
+      <article class="section-card" data-cat="tech">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🌐</div>
+            <span class="card-num-badge">08</span>
+          </div>
+          <h2 class="card-title">Network Engineering &amp; VoIP</h2>
+          <div class="card-subtitle">Enterprise LAN/WAN &amp; Telephony</div>
+          <p class="card-desc">Campus routing &amp; switching, VLAN segmentation, TCP/IP architecture, IP Telephony (VoIP) deployment, backed by IBM and Microsoft certifications.</p>
+          <div class="card-tags">
+            <span class="tag-badge">IBM Networks</span>
+            <span class="tag-badge">Microsoft Secure Net</span>
+            <span class="tag-badge">VoIP</span>
+            <span class="tag-badge">VLAN</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-8')">
+            <span>🔌</span>
+            <span>Inspect Networks</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1t0t4Sr0Unrn5YC4mYaI5RA-ikorwoX0p/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Network Certificates on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 09 -->
+      <article class="section-card" data-cat="tech">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🔒</div>
+            <span class="card-num-badge">09</span>
+          </div>
+          <h2 class="card-title">Cybersecurity &amp; Threat Defense</h2>
+          <div class="card-subtitle">Endpoint Hardening &amp; Cloud Security</div>
+          <p class="card-desc">Google Cybersecurity Foundations, University of Maryland cybersecurity policy, endpoint defense, and Cloud Computing Security (Attaa Digital / PNU).</p>
+          <div class="card-tags">
+            <span class="tag-badge">Google Cyber</span>
+            <span class="tag-badge">Univ of Maryland</span>
+            <span class="tag-badge">Cloud Security</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-9')">
+            <span>🛡️</span>
+            <span>Cyber Defense</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1t0t4Sr0Unrn5YC4mYaI5RA-ikorwoX0p/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Cybersecurity Documents on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 10 -->
+      <article class="section-card" data-cat="tech">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🖥️</div>
+            <span class="card-num-badge">10</span>
+          </div>
+          <h2 class="card-title">Data Center &amp; IT Helpdesk Ops</h2>
+          <div class="card-subtitle">24/7 SLA &amp; Academic Systems</div>
+          <p class="card-desc">High-availability operations, Awn ticketing workflows, Google IT Support Professional suite, and technical support for Blackboard LMS, Banner, and Argus.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Google IT Support</span>
+            <span class="tag-badge">Data Center 24/7</span>
+            <span class="tag-badge">Awn System</span>
+            <span class="tag-badge">Blackboard</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-10')">
+            <span>🛠️</span>
+            <span>Operations Details</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1t0t4Sr0Unrn5YC4mYaI5RA-ikorwoX0p/view?usp=sharing" target="_blank" class="card-drive-btn" title="View IT Operations Files on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 11 -->
+      <article class="section-card" data-cat="tech">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">💻</div>
+            <span class="card-num-badge">11</span>
+          </div>
+          <h2 class="card-title">Web Stack, Databases &amp; Systems</h2>
+          <div class="card-subtitle">Software Engineering Foundations</div>
+          <p class="card-desc">Proficiency in modern frontend technologies (HTML5, CSS3, JavaScript), relational database design &amp; SQL, Windows Server, CCTV, and biometrics.</p>
+          <div class="card-tags">
+            <span class="tag-badge">HTML5 / CSS3 / JS</span>
+            <span class="tag-badge">Databases (SQL)</span>
+            <span class="tag-badge">Windows Server</span>
+            <span class="tag-badge">CCTV &amp; Biometrics</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-11')">
+            <span>📊</span>
+            <span>Proficiency Matrix</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- CARD 12 -->
+      <article class="section-card" data-cat="edu">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🎓</div>
+            <span class="card-num-badge">12</span>
+          </div>
+          <h2 class="card-title">Academic Degrees &amp; Postgraduate</h2>
+          <div class="card-subtitle">Cairo University FGSSR &amp; Education</div>
+          <p class="card-desc">M.Sc. in Software Engineering (Year 1 Ongoing 2026/2027) &amp; Pre-Master's Diploma (2025/2026 - Grade: Good) at Cairo Univ (FGSSR), with B.A. &amp; Education Diploma.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Cairo Univ FGSSR</span>
+            <span class="tag-badge">M.Sc. Software Eng</span>
+            <span class="tag-badge">Tanta University</span>
+            <span class="tag-badge">Mansoura University</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-12')">
+            <span>📜</span>
+            <span>Academic Credentials</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1vCkv2baS9K2qUYKFFJbKpO4_KNLjC6th/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Academic Degrees on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 13 -->
+      <article class="section-card" data-cat="edu">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">⭐</div>
+            <span class="card-num-badge">13</span>
+          </div>
+          <h2 class="card-title">ABET &amp; NCAAA Quality Honors</h2>
+          <div class="card-subtitle">Official University Leadership Honors</div>
+          <p class="card-desc">Official recognition from Northern Border University President (Prof. Ahmed Al-Rumaih) for significant contributions to achieving international ABET and national NCAAA accreditations.</p>
+          <div class="card-tags">
+            <span class="tag-badge">ABET Accredited</span>
+            <span class="tag-badge">NCAAA</span>
+            <span class="tag-badge">NBU President Honor</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-13')">
+            <span>🎖️</span>
+            <span>View Quality Awards</span>
+          </button>
+          <a href="https://drive.google.com/file/d/19rUfmmAWOHRQLF3zH7FIwOmbDis6GKYb/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Accreditation Honors on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 14 -->
+      <article class="section-card" data-cat="edu">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🤝</div>
+            <span class="card-num-badge">14</span>
+          </div>
+          <h2 class="card-title">Community &amp; Volunteer Training</h2>
+          <div class="card-subtitle">Non-Profit Technical Empowerment</div>
+          <p class="card-desc">Delivering specialized computer, office automation, and data entry training for non-profit organizations: Kafl Prisoners' Care, Sehatty Health, and Al-Birr Charitable Association.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Kafl Association</span>
+            <span class="tag-badge">Sehatty Association</span>
+            <span class="tag-badge">Al-Birr Association</span>
+            <span class="tag-badge">Attaa Digital</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-14')">
+            <span>🌱</span>
+            <span>Community Impact</span>
+          </button>
+          <a href="https://drive.google.com/file/d/1BI_ABg-iwJnVjJk5roijXVEds8KpeL-O/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Community Certificates on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 15 -->
+      <article class="section-card" data-cat="all">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-wrap">🏆</div>
+            <span class="card-num-badge">15</span>
+          </div>
+          <h2 class="card-title">Honors &amp; Live Verification Hub</h2>
+          <div class="card-subtitle">Instant Digital Credential Check</div>
+          <p class="card-desc">Official letters of appreciation from NBU deanships, combined with one-click live verification engine for Coursera, Google Skills, IBM, and Microsoft.</p>
+          <div class="card-tags">
+            <span class="tag-badge">Appreciation Letters</span>
+            <span class="tag-badge">Coursera Verify</span>
+            <span class="tag-badge">Google Skills (15)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="card-btn" onclick="openModal('m-15')">
+            <span>🎖️</span>
+            <span>Verification Hub</span>
+          </button>
+          <a href="https://drive.google.com/file/d/19rUfmmAWOHRQLF3zH7FIwOmbDis6GKYb/view?usp=sharing" target="_blank" class="card-drive-btn" title="View Appreciation Letters on Google Drive">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       ROYAL MODALS CONTAINER (15 Full English Modals + Drive Links)
+       ========================================================================== -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal-container" id="modalContainer">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-wrap" id="modalIcon"></div>
+          <div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <div class="modal-subtitle" id="modalSubtitle"></div>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ATS MODAL PREVIEW (CLEAN ENGLISH ATS RESUME)
+       ========================================================================== -->
+  <div class="modal-overlay" id="atsModalOverlay" onclick="closeAtsModalOnOverlay(event)">
+    <div class="modal-container" style="max-width:880px; background:#ffffff; color:#1a1d23; border:none; padding:36px 30px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #1e4d8c; padding-bottom:14px; margin-bottom:20px; flex-wrap:wrap; gap:10px;">
+        <div style="text-align:left;">
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; color:#1e4d8c; font-weight:700;">ATS-Optimized Resume (English)</h2>
+          <div style="font-size:0.85rem; color:#5a6072;">Standard machine-readable layout for automated screening parsers</div>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button onclick="window.print()" style="padding:9px 18px; background:#1e4d8c; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold; font-size:0.88rem; display:inline-flex; align-items:center; gap:6px;">
+            <span>💾 Save as PDF</span>
+          </button>
+          <button onclick="closeAtsModal()" style="padding:9px 16px; background:#e2e6eb; color:#1a1d23; border:none; border-radius:6px; cursor:pointer; font-weight:bold; font-size:0.88rem;">Close</button>
+        </div>
+      </div>
+      <div id="atsModalContent" class="ats-cv-document"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">Contact information copied successfully!</div>
+
+  <!-- ==========================================================================
+       DEDICATED ATS PRINT CONTAINER (EXACT ENGLISH ATS CV AS UPLOADED)
+       ========================================================================== -->
+  <div id="atsPrintView">
+    <div class="ats-cv-document" id="atsSourceDocument">
+      
+      <!-- ATS Header -->
+      <header class="cv-header">
+        <h1>Mahmoud Mohamed Ibrahim Zaher</h1>
+        <div class="title-line">Senior IT Support Specialist | Network Engineer | Infrastructure Manager</div>
+        <div class="contact-row">
+          <span>📱 +966 56 590 7242</span>
+          <span>✉️ Mxz770@gmail.com</span>
+          <span>📍 Rafha, Northern Borders, Saudi Arabia</span>
+          <span>🌐 linkedin.com/in/mahmoud-zaher</span>
+          <span>🪪 Iqama: 2301779076 (Transferable/Valid)</span>
+        </div>
+      </header>
+
+      <!-- Professional Summary -->
+      <section class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+          IT Support Specialist and Network Engineer with 15+ years of experience delivering end-to-end technical support, network administration, and IT infrastructure management for large academic institutions. Proven track record managing 500+ endpoints across 19 computer labs, operating 24/7 Data Center environments, and resolving helpdesk tickets within SLA requirements using the Awn ticketing system. Certified in Risk Management (ISO 31000), IT Service Management (ISO 20000), AI Security &amp; MLOps (Google Cloud 15 Badges), and AI Fluency (IBM). Currently pursuing a Master's degree in Software Engineering at Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University. Skilled in LAN/WAN administration, structured cabling, Video Conferencing, IP Telephony, web technologies (HTML5, CSS3, JavaScript, Databases SQL), and university information systems (Blackboard, Banner, Argus).
+        </p>
+      </section>
+
+      <!-- Core Competencies -->
+      <section class="section">
+        <div class="section-title">Core Competencies &amp; Technical Keywords</div>
+        <div class="keyword-cloud">
+          <span class="kw">IT Support Specialist</span>
+          <span class="kw">Help Desk / Helpdesk</span>
+          <span class="kw">Hardware Troubleshooting</span>
+          <span class="kw">Software Troubleshooting</span>
+          <span class="kw">LAN / WAN Administration</span>
+          <span class="kw">Network Engineering</span>
+          <span class="kw">Structured Cabling</span>
+          <span class="kw">IP Telephony</span>
+          <span class="kw">Video Conferencing</span>
+          <span class="kw">Data Center Management</span>
+          <span class="kw">Windows 10 / 11</span>
+          <span class="kw">Windows Server</span>
+          <span class="kw">Active Directory</span>
+          <span class="kw">Web Development (HTML/CSS/JS)</span>
+          <span class="kw">Databases &amp; SQL</span>
+          <span class="kw">Endpoint Security</span>
+          <span class="kw">Cybersecurity Fundamentals</span>
+          <span class="kw">Cloud Computing</span>
+          <span class="kw">Blackboard LMS</span>
+          <span class="kw">SLA Management</span>
+          <span class="kw">ITIL / IT Service Management</span>
+          <span class="kw">ISO 20000</span>
+          <span class="kw">ISO 31000</span>
+          <span class="kw">Risk Management</span>
+          <span class="kw">Agile / Scrum</span>
+          <span class="kw">AI Fluency</span>
+          <span class="kw">Model Armor &amp; AI Security</span>
+          <span class="kw">MLOps</span>
+          <span class="kw">CCTV Systems</span>
+          <span class="kw">Biometric Systems</span>
+          <span class="kw">Smart Boards / AV Systems</span>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Network Engineer / IT Support Specialist</div>
+              <div class="job-company">World Development Co. for Telecommunications &amp; Information Systems (Namaa World) — Northern Border University Project | Rafha, Saudi Arabia</div>
+            </div>
+            <span class="job-period">06/2020 – Present</span>
+          </div>
+          <ul>
+            <li>Oversee IT operations for <strong>19 computer labs with 500+ endpoints</strong>, including installation, configuration, and ongoing maintenance of hardware and software.</li>
+            <li>Provide Tier 1–2 end-user technical support for faculty and staff, resolving helpdesk tickets via the <strong>Awn</strong> system while consistently meeting SLA targets.</li>
+            <li>Manage <strong>24/7 Data Center</strong> operations including server health monitoring, cooling systems, and network uptime for mission-critical university systems (Blackboard, Banner, Argus).</li>
+            <li>Configure and maintain campus network (NBU.EDU.SA), troubleshoot LAN/WAN issues, and manage domain user accounts and device connectivity via Active Directory.</li>
+            <li>Deploy and maintain Office 365, antivirus solutions, and Windows updates; enforce security policies and cybersecurity awareness across all endpoints.</li>
+            <li>Executed <strong>22-point structured cabling project</strong> for Preparatory College faculty offices (1439H), including termination, testing, and activation.</li>
+            <li>Coordinate with IT management and vendors to plan and implement infrastructure upgrades.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">IT Support Technician / AV &amp; Network Specialist</div>
+              <div class="job-company">El-Ajou Group Trading Co. — Northern Border University Contracts | Rafha, Saudi Arabia</div>
+            </div>
+            <span class="job-period">03/2014 – 06/2020</span>
+          </div>
+          <ul>
+            <li>Delivered full-spectrum IT support across university campus: desktops, laptops, printers, scanners, copiers, and projectors.</li>
+            <li>Installed, programmed, and maintained <strong>Video Conferencing systems</strong> (VC rooms) and E-Learning multimedia classrooms, supporting weekly live academic broadcasts.</li>
+            <li>Configured and deployed <strong>IP Phone (VoIP) systems</strong>, structured cabling, and audio amplifier systems for academic facilities.</li>
+            <li>Equipped lecture halls and auditoriums with interactive smart boards, AV systems, and display technology.</li>
+            <li>Recognized with a <strong>Certificate of Appreciation</strong> from the Deanship of Library Affairs, Northern Border University (1436H / 2015).</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Technical Support Manager / Network Technician</div>
+              <div class="job-company">Retaj Al-Shamal Electronics Maintenance Est. | Rafha, Saudi Arabia</div>
+            </div>
+            <span class="job-period">01/2011 – 02/2014</span>
+          </div>
+          <ul>
+            <li>Managed all hardware and software troubleshooting and repair operations for desktop PCs and laptops.</li>
+            <li>Installed and maintained <strong>LAN/WLAN networks</strong>, CCTV security camera systems, and biometric access control systems.</li>
+            <li>Set up and serviced projectors, document cameras, smart boards, and peripheral devices for business clients.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Key Projects -->
+      <section class="section">
+        <div class="section-title">Key Projects</div>
+        <div class="project-item">
+          <strong>IT Infrastructure Operations — Northern Border University (06/2020 – Present)</strong>
+          Ongoing management of daily IT support, computer lab maintenance (19 labs / 500+ PCs), 24/7 Data Center operations, and support for Blackboard, Banner, and Argus university systems.
+        </div>
+        <div class="project-item">
+          <strong>22-Point Structured Cabling Installation — Preparatory College (1439H / 2018)</strong>
+          Planned and executed full network cabling for faculty office block, including termination, testing, and activation of all network points.
+        </div>
+        <div class="project-item">
+          <strong>E-Learning &amp; Video Conferencing Rooms Setup (03/2014 – 06/2020)</strong>
+          Designed, installed, and commissioned VC and multimedia rooms at multiple university branches; supported weekly live academic events over Videoconference.
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section">
+        <div class="section-title">Skills</div>
+        <div class="skills-two">
+          <div class="skill-col">
+            <h4 style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#1a1d23; margin:0 0 6px;">Technical Skills</h4>
+            <ul>
+              <li>Hardware / Software Troubleshooting (PC &amp; Laptop)</li>
+              <li>LAN / WAN Network Administration &amp; Structured Cabling</li>
+              <li>Frontend Web Development (HTML5, CSS3, JavaScript)</li>
+              <li>Databases &amp; System Architecture (SQL, Relational Models)</li>
+              <li>Video Conferencing &amp; IP Telephony Configuration</li>
+              <li>Data Center Management &amp; System Monitoring (24/7 SLA)</li>
+              <li>Helpdesk &amp; Ticketing Systems (Awn, ITIL)</li>
+              <li>Windows Server, Active Directory, Group Policy</li>
+              <li>University Systems: Blackboard LMS, Banner, Argus</li>
+              <li>CCTV, Biometrics, Smart Boards, AV Systems</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4 style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#1a1d23; margin:0 0 6px;">Soft Skills &amp; Methodologies</h4>
+            <ul>
+              <li>Problem Solving &amp; Root Cause Analysis</li>
+              <li>SLA Adherence &amp; Time Management</li>
+              <li>End-User Communication &amp; Training</li>
+              <li>Team Collaboration &amp; Cross-functional Coordination</li>
+              <li>Information Security Awareness</li>
+              <li>Risk Management (ISO 31000)</li>
+              <li>Agile / Scrum Project Management</li>
+              <li>Continuous Improvement &amp; IT Service Excellence</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Certifications -->
+      <section class="section">
+        <div class="section-title">Professional Certifications &amp; Training</div>
+        <div class="cert-group" style="margin-bottom:8px;">
+          <h4 style="font-size:12px; font-weight:700; color:#1a1d23; margin:0 0 3px;">Risk Management &amp; IT Service Management</h4>
+          <ul>
+            <li>Managing Risk &amp; Building Resilience — ISO 31000 | Ministry of Communications &amp; IT (MCIT / RMBCC) | 01/2025 | 8 CPD Hours</li>
+            <li>IT Service Management Awareness — ISO 20000-1:2018 | TÜV NORD / FAHSS | 09/2022</li>
+          </ul>
+        </div>
+        <div class="cert-group" style="margin-bottom:8px;">
+          <h4 style="font-size:12px; font-weight:700; color:#1a1d23; margin:0 0 3px;">AI, Security &amp; Cloud (Google Cloud &amp; IBM)</h4>
+          <ul>
+            <li>Google Cloud: 15 Certified Skill Badges including Model Armor: Securing AI Deployments, Introduction to Security in the World of AI, Responsible AI for Developers, and MLOps with Generative AI (11/2026).</li>
+            <li>IBM SkillsBuild: AI Fluency Pathway — 4 Microcredentials (PLAN-46131E682B13) | 2026</li>
+            <li>IBM SkillsBuild: Agile Project Management — Scrum, Kanban, Lean, XP | 2026</li>
+            <li>DeepLearning.AI: AI for Everyone (Andrew Ng) | Coursera | 09/2023</li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h4 style="font-size:12px; font-weight:700; color:#1a1d23; margin:0 0 3px;">Technical Support &amp; Cybersecurity (Google / Microsoft / IBM)</h4>
+          <ul>
+            <li>Technical Support Fundamentals | Google / Coursera | 12/2025</li>
+            <li>Foundations of Cybersecurity | Google / Coursera | 11/2024</li>
+            <li>Computer Networks and Network Security | IBM / Coursera | 11/2024</li>
+            <li>Microsoft Certified Credentials: Secure Networking, Operating Systems &amp; Security, Cloud Computing, Hardware &amp; Data Backup (12/2025).</li>
+            <li>Cybersecurity for Everyone | University of Maryland / Coursera | 11/2024</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="degree">Master of Science in Software Engineering — Year 1 (Ongoing 2026 / 2027)</div>
+          <div class="meta">Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University, Egypt</div>
+        </div>
+        <div class="edu-item">
+          <div class="degree">Preliminary Master's Diploma in Software Engineering (2025 / 2026)</div>
+          <div class="meta">Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University, Egypt | Grade: Good</div>
+        </div>
+        <div class="edu-item">
+          <div class="degree">General Diploma in Education — Philosophy &amp; Sociology</div>
+          <div class="meta">Tanta University, Egypt | 2010 | Grade: Good (68.47%)</div>
+        </div>
+        <div class="edu-item">
+          <div class="degree">Bachelor of Arts — Philosophy</div>
+          <div class="meta">Mansoura University, Egypt | 2002 | Grade: Good (69.65%)</div>
+        </div>
+        <div class="edu-item">
+          <div class="degree">Industrial Secondary School Diploma — Electrical &amp; Electronic Equipment Maintenance</div>
+          <div class="meta">Mansoura, Egypt | 1995</div>
+        </div>
+      </section>
+
+      <!-- Community / Volunteering -->
+      <section class="section">
+        <div class="section-title">Volunteer &amp; Community Contributions</div>
+        <div class="vol-item" style="font-size:12px; margin-bottom:4px;"><strong>Kafl Association for Prisoners' Care:</strong> Delivered Data Entry &amp; Text Processing training course for staff (06/2024).</div>
+        <div class="vol-item" style="font-size:12px; margin-bottom:4px;"><strong>Sehatty Health Association:</strong> Conducted Computer Use in Office Work and Data Entry courses (02/2024 &amp; 03/2024).</div>
+        <div class="vol-item" style="font-size:12px;"><strong>Al-Bir Charitable Association, Talaat Al-Timyat:</strong> Delivered Computer Use in Office Work course (02/2024).</div>
+      </section>
+
+      <!-- Languages -->
+      <section class="section">
+        <div class="section-title">Languages</div>
+        <div style="font-size:12px;"><strong>Arabic:</strong> Native — Full Professional Proficiency | <strong>English:</strong> Professional Working Proficiency (Technical reading, writing &amp; communication)</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       GOOGLE DRIVE REAL VERIFIED LINKS CONFIG
+       ========================================================================== */
+    const DRIVE_LINKS = {
+      academic: "https://drive.google.com/file/d/1vCkv2baS9K2qUYKFFJbKpO4_KNLjC6th/view?usp=sharing",
+      experience: "https://drive.google.com/file/d/1y4tml0blhkW8_60m_qL25ZhQcfnq1qVn/view?usp=sharing",
+      governance: "https://drive.google.com/file/d/1aQJXgR6ItCTLSYu_olmfeFK2ZpchGF03/view?usp=sharing",
+      aiPathways: "https://drive.google.com/file/d/1ShhYtRQ1JJNHXnnO5pKxQ4F6XGRIh7AH/view?usp=sharing",
+      agile: "https://drive.google.com/file/d/1p91vuny-hXUq8lZ0tlfvGIbYG1cIi82s/view?usp=sharing",
+      dga: "https://drive.google.com/file/d/1oFSSThr-2k9hOPkD5pZY90c9dZOcw7BK/view?usp=sharing",
+      networksSupport: "https://drive.google.com/file/d/1t0t4Sr0Unrn5YC4mYaI5RA-ikorwoX0p/view?usp=sharing",
+      attaaDigital: "https://drive.google.com/file/d/1URKlyUChsoq63cat5QLHeoKkezTNUPr4/view?usp=sharing",
+      abetHonors: "https://drive.google.com/file/d/19rUfmmAWOHRQLF3zH7FIwOmbDis6GKYb/view?usp=sharing",
+      community: "https://drive.google.com/file/d/1BI_ABg-iwJnVjJk5roijXVEds8KpeL-O/view?usp=sharing",
+      googleSkillsProfile: "https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8"
+    };
+
+    /* ==========================================================================
+       MODAL DATA STORE (100% ENGLISH - RICH CONTENT & REAL DRIVE LINKS)
+       ========================================================================== */
+    const sectionsData = {
+      "m-1": {
+        title: "Executive Profile & Leadership Summary",
+        subtitle: "15+ Years of Proven IT Excellence",
+        icon: "👤",
+        content: `
+          <div class="detail-card">
+            <h4 style="color:var(--gold-bright); margin-bottom:12px; font-size:1.1rem;">Professional Profile</h4>
+            <p style="margin-bottom:14px;">Senior IT Support Specialist and Network Engineer with over 15 years of hands-on experience directing campus-wide IT infrastructures, 24/7 mission-critical Data Centers, and large-scale endpoint deployments across major academic institutions. Proven track record managing 500+ workstations across 19 computer labs, maintaining 99.9% uptime, and resolving thousands of helpdesk tickets via the Awn ticketing system with strict SLA compliance.</p>
+            <p style="margin-bottom:14px;">Certified in Enterprise Risk Management (ISO 31000), IT Service Management (ISO 20000), AI Security &amp; MLOps from Google Cloud (15 certified skill badges), and AI Fluency from IBM. Currently pursuing a Master of Science in Software Engineering at Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University.</p>
+          </div>
+          <div class="detail-card">
+            <h4 style="color:var(--gold-bright); margin-bottom:12px; font-size:1.1rem;">Core Competencies &amp; Technical Keywords</h4>
+            <div class="card-tags">
+              <span class="tag-badge">IT Support Specialist</span>
+              <span class="tag-badge">Network Engineering</span>
+              <span class="tag-badge">Structured Cabling</span>
+              <span class="tag-badge">IP Telephony &amp; VoIP</span>
+              <span class="tag-badge">Data Center Operations</span>
+              <span class="tag-badge">Windows Server / Active Directory</span>
+              <span class="tag-badge">SLA Adherence</span>
+              <span class="tag-badge">Awn Helpdesk</span>
+              <span class="tag-badge">ISO 31000 Risk Management</span>
+              <span class="tag-badge">ISO 20000-1 ITSM</span>
+              <span class="tag-badge">Frontend (HTML5/CSS3/JS)</span>
+              <span class="tag-badge">Databases (SQL)</span>
+              <span class="tag-badge">Blackboard LMS</span>
+              <span class="tag-badge">Banner System</span>
+              <span class="tag-badge">CCTV &amp; Biometrics</span>
+            </div>
+          </div>
+        `
+      },
+      "m-2": {
+        title: "Chronological Work Experience",
+        subtitle: "15+ Years Across Leading Tech & Academic Organizations",
+        icon: "💼",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>📄</span>
+              <span>Official stamped experience letters available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.experience}" target="_blank" class="btn-drive-action">
+              <span>View Experience Letters (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Network Engineer / Senior IT Support Specialist</div>
+                <div class="detail-org">World Development Co. for Telecom &amp; IT (Namaa World) — Northern Border University Project | Rafha, Saudi Arabia</div>
+              </div>
+              <div class="detail-date">06/2020 – Present</div>
+            </div>
+            <ul class="detail-bullets">
+              <li>Direct IT operations for 19 computer laboratories hosting 500+ endpoints, guaranteeing readiness for national Qiyas standardized exams and university finals.</li>
+              <li>Deliver Tier 1–2 technical escalation support for faculty, administration, and students, resolving helpdesk tickets via the Awn ticketing platform with strict SLA adherence.</li>
+              <li>Oversee 24/7 Data Center facilities including server racks, cooling, uninterrupted power, and network connectivity for critical systems (Blackboard, Banner, Argus).</li>
+              <li>Manage campus network infrastructure (NBU.EDU.SA), routing, switching, Active Directory accounts, and Group Policy Objects.</li>
+              <li>Executed 22-point structured cabling deployment in Preparatory College faculty offices with 100% testing and certification.</li>
+            </ul>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">IT Support Technician / AV &amp; Network Specialist</div>
+                <div class="detail-org">El-Ajou Group Trading Co. — Northern Border University Contracts | Rafha, Saudi Arabia</div>
+              </div>
+              <div class="detail-date">03/2014 – 06/2020</div>
+            </div>
+            <ul class="detail-bullets">
+              <li>Delivered complete technical support for PCs, laptops, printers, scanners, copiers, and interactive projectors across the university branch.</li>
+              <li>Installed, configured, and operated dedicated Video Conferencing (VC) suites and multimedia rooms, broadcasting weekly live academic events across university branches.</li>
+              <li>Configured and maintained IP Telephony (VoIP) endpoints, campus telephony cabling, and auditorium audio mixing systems.</li>
+              <li>Honored with an official Certificate of Appreciation from the Deanship of Library Affairs (1436H / 2015).</li>
+            </ul>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Technical Support Manager / Network Technician</div>
+                <div class="detail-org">Retaj Al-Shamal Electronics Maintenance Est. | Rafha, Saudi Arabia</div>
+              </div>
+              <div class="detail-date">01/2011 – 02/2014</div>
+            </div>
+            <ul class="detail-bullets">
+              <li>Led field repair and maintenance teams for computer hardware, component-level troubleshooting, and OS deployment.</li>
+              <li>Installed and configured wired and wireless LAN/WLAN networks, CCTV surveillance camera systems, and biometric time-attendance systems for business clients.</li>
+            </ul>
+          </div>
+        `
+      },
+      "m-3": {
+        title: "Key Technical & Infrastructure Projects",
+        titleEn: "Large-Scale Deployments & Modernization",
+        icon: "🏗️",
+        content: `
+          <div class="detail-card">
+            <div class="detail-header">
+              <div class="detail-role">22-Point Structured Cabling Project</div>
+              <div class="detail-date">1439H / 2018</div>
+            </div>
+            <p>Direct project planning and physical installation of high-speed Cat6 network drops for faculty office blocks in Preparatory College. Included faceplate termination, distribution cabinet patching, fluke testing, and 100% successful activation.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div class="detail-role">E-Learning &amp; Video Conferencing (VC) Suites Commissioning</div>
+              <div class="detail-date">2014 – 2020</div>
+            </div>
+            <p>Designed and deployed centralized multimedia and VC broadcast rooms across university colleges. Integrated PTZ cameras, digital audio processors, and dual-display setups ensuring zero transmission failures during live lectures.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div class="detail-role">Modernization of 19 Academic Computer Labs (500+ PCs)</div>
+              <div class="detail-date">Ongoing</div>
+            </div>
+            <p>Re-architected golden OS deployment images, centralized software distribution, and security baseline hardening to satisfy national academic accreditation standards.</p>
+          </div>
+        `
+      },
+      "m-4": {
+        title: "IT Governance & Enterprise Risk Management",
+        subtitle: "ISO 31000 & ISO 20000 International Compliance",
+        icon: "🛡️",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🛡️</span>
+              <span>Official ISO certificates and credentials available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.governance}" target="_blank" class="btn-drive-action">
+              <span>View ISO Certificates (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">ISO 31000: Managing Risk &amp; Building Resilience</div>
+                <div class="detail-org">Risk Management &amp; Business Continuity Center (RMBCC) — Ministry of Communications &amp; IT (MCIT)</div>
+              </div>
+              <div class="detail-date">14 Jan 2025</div>
+            </div>
+            <p>Accredited by The CPD Standards Office (United Kingdom, Provider: 60104) granting <strong>8 CPD Professional Hours</strong>, issued on 29 Jan 2025 by RMBCC General Manager Abdullah AlZandan.</p>
+            <ul class="detail-bullets">
+              <li>Framework design for identifying, evaluating, and mitigating enterprise IT risks.</li>
+              <li>Business Continuity Planning (BCP) and Disaster Recovery Planning (DRP).</li>
+              <li>Crisis management and institutional resilience in government infrastructure.</li>
+            </ul>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">ISO 20000-1:2018 IT Service Management Awareness</div>
+                <div class="detail-org">TÜV NORD / National Inspection &amp; Technical Testing Co. Ltd. (FAHSS)</div>
+              </div>
+              <div class="detail-date">28 Sep 2022</div>
+            </div>
+            <p>Official certificate under number <code>ITSMS/AWA/I/1001/2022/25</code> verifying competence in IT Service Management (ITSM), Service Level Agreement (SLA) design, incident &amp; problem management, and continual service improvement.</p>
+          </div>
+        `
+      },
+      "m-5": {
+        title: "AI Fluency, Security & MLOps Suite",
+        subtitle: "15 Google Cloud Badges, IBM AI Pathway & DeepLearning.AI",
+        icon: "🤖",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🤖</span>
+              <span>Complete AI dossiers and credential documents available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.aiPathways}" target="_blank" class="btn-drive-action">
+              <span>View AI Documents (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Google Cloud — 15 Certified Skill Badges in AI, Security &amp; MLOps</div>
+                <div class="detail-org">Google Cloud Skills Boost Platform</div>
+              </div>
+              <div class="detail-date">2023 – 2026</div>
+            </div>
+            <p style="margin-bottom:12px;">Verified portfolio of 15 specialized Google Cloud credentials, featuring <strong>5 advanced badges earned on 12 Nov 2026</strong>:</p>
+            
+            <h5 style="color:var(--gold-bright); margin:10px 0 6px 0;">Newly Earned Credentials (Nov 12, 2026):</h5>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
+              <div>
+                <strong>1. Introduction to Security in the World of AI</strong>
+                <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8/badges/29585003" target="_blank" class="verify-badge-link google">Verify: 29585003</a>
+              </div>
+              <div>
+                <strong>2. Model Armor: Securing AI Deployments</strong>
+                <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8/badges/29584723" target="_blank" class="verify-badge-link google">Verify: 29584723</a>
+              </div>
+              <div>
+                <strong>3. Responsible AI for Developers: Fairness &amp; Bias</strong>
+                <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8/badges/29583711" target="_blank" class="verify-badge-link google">Verify: 29583711</a>
+              </div>
+              <div>
+                <strong>4. MLOps with Agent Platform: Model Evaluation</strong>
+                <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8/badges/29583387" target="_blank" class="verify-badge-link google">Verify: 29583387</a>
+              </div>
+              <div>
+                <strong>5. Machine Learning Operations (MLOps) for Generative AI</strong>
+                <a href="https://www.skills.google/public_profiles/1eaebbdd-3ec1-4e0e-ad80-9fab7c519da8/badges/29582772" target="_blank" class="verify-badge-link google">Verify: 29582772</a>
+              </div>
+            </div>
+
+            <h5 style="color:var(--gold-bright); margin:10px 0 6px 0;">Foundational AI Badges (Sep 2023):</h5>
+            <div class="card-tags">
+              <span class="tag-badge">Introduction to Vertex AI Studio</span>
+              <span class="tag-badge">Create Image Captioning Models</span>
+              <span class="tag-badge">Transformer Models &amp; BERT Model</span>
+              <span class="tag-badge">Attention Mechanism</span>
+              <span class="tag-badge">Encoder-Decoder Architecture</span>
+              <span class="tag-badge">Introduction to Image Generation</span>
+              <span class="tag-badge">Generative AI Fundamentals</span>
+              <span class="tag-badge">Introduction to Large Language Models</span>
+              <span class="tag-badge">Introduction to Generative AI</span>
+            </div>
+            <div style="margin-top:14px;">
+              <a href="${DRIVE_LINKS.googleSkillsProfile}" target="_blank" class="verify-badge-link">
+                🌐 View Full Public Google Skills Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">IBM SkillsBuild — AI Fluency Pathway (4 Microcredentials)</div>
+                <div class="detail-org">IBM Global Certification Program</div>
+              </div>
+              <div class="detail-date">Jul 2026</div>
+            </div>
+            <p>Completed official approved plan <code>PLAN-46131E682B13</code> covering 14+ modules including Responsible AI, AI-powered Decision Making, Prompt Engineering, and Enterprise AI Strategy.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">DeepLearning.AI — AI for Everyone (Prof. Andrew Ng)</div>
+                <div class="detail-org">Coursera / DeepLearning.AI</div>
+              </div>
+              <div class="detail-date">20 Sep 2023</div>
+            </div>
+            <a href="https://coursera.org/verify/FP43UWR7J43M" target="_blank" class="verify-badge-link">
+              <span>Verify Coursera ID: FP43UWR7J43M</span>
+            </a>
+          </div>
+        `
+      },
+      "m-6": {
+        title: "Agile, Scrum & Project Frameworks",
+        subtitle: "IBM SkillsBuild Professional Methodologies",
+        icon: "📋",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>📋</span>
+              <span>IBM Agile suite certificates available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.agile}" target="_blank" class="btn-drive-action">
+              <span>View Agile Suite (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Agile Project Management &amp; Scrum Suite</div>
+                <div class="detail-org">IBM SkillsBuild (in partnership with Simplilearn, Edureka, OpenClassrooms)</div>
+              </div>
+              <div class="detail-date">Jul 2026</div>
+            </div>
+            <ul class="detail-bullets">
+              <li><strong>What is Agile at IBM?</strong> — IBM enterprise software development methodology (ALM-4067555).</li>
+              <li><strong>Agile Concepts | Scrum Master Tutorial</strong> (Simplilearn) — Sprint planning, backlog grooming, and daily standups.</li>
+              <li><strong>Agile Frameworks: Scrum, Kanban, Lean, XP, Crystal</strong> (Edureka) — Comparative framework implementation.</li>
+              <li><strong>Agile Scrum Master 4-Hour Master Course</strong> (Simplilearn).</li>
+              <li><strong>Software Development Methodology: What is Agile?</strong> (Codecademy).</li>
+              <li><strong>Découvrir la posture d'agilité &amp; Gestion de projet agile</strong> (OpenClassrooms - 6 Hours).</li>
+            </ul>
+          </div>
+        `
+      },
+      "m-7": {
+        title: "Digital Government Authority (DGA)",
+        subtitle: "National Digital Academy (Qudurat.tk) Certification",
+        icon: "🏛️",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🏛️</span>
+              <span>Official DGA certificates available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.dga}" target="_blank" class="btn-drive-action">
+              <span>View DGA Certificates (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Government Digital Capabilities Program (Qudurat.tk)</div>
+                <div class="detail-org">Digital Government Authority (DGA), Kingdom of Saudi Arabia</div>
+              </div>
+              <div class="detail-date">Mar 2023</div>
+            </div>
+            <ul class="detail-bullets">
+              <li><strong>Leadership &amp; Innovation in the Public Sector</strong> (Issued: 13 Mar 2023).</li>
+              <li><strong>Foundations of Digital Trust &amp; Identity</strong> (Issued: 13 Mar 2023).</li>
+              <li><strong>Artificial Intelligence Applications in Government</strong> (Issued: 16 Mar 2023).</li>
+              <li><strong>Design Thinking in the Public Sector</strong> (Issued: 16 Mar 2023).</li>
+              <li><strong>Government Digital Services Design</strong> (Issued: 20 Mar 2023).</li>
+              <li><strong>Search Engine Optimization (SEO) for Government Portals</strong> (Issued: 15 Mar 2023).</li>
+            </ul>
+          </div>
+        `
+      },
+      "m-8": {
+        title: "Network Engineering & IP Telephony",
+        subtitle: "Campus Infrastructure, Routing, Switching & VoIP",
+        icon: "🌐",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🌐</span>
+              <span>Network and support credentials available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.networksSupport}" target="_blank" class="btn-drive-action">
+              <span>View Network Credentials (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Computer Networks and Network Security</div>
+                <div class="detail-org">IBM Skills Network via Coursera</div>
+              </div>
+              <div class="detail-date">12 Nov 2024</div>
+            </div>
+            <p>Comprehensive training in TCP/IP protocol suite, subnetting, enterprise packet routing, packet switching, firewalls, and network defense.</p>
+            <a href="https://coursera.org/verify/1R7C76GWI0FK" target="_blank" class="verify-badge-link">
+              <span>Verify: 1R7C76GWI0FK</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Introduction to Secure Networking</div>
+                <div class="detail-org">Microsoft via Coursera</div>
+              </div>
+              <div class="detail-date">17 Dec 2025</div>
+            </div>
+            <a href="https://coursera.org/verify/8JKDOABDSVBF" target="_blank" class="verify-badge-link">
+              <span>Verify: 8JKDOABDSVBF</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Introduction to Networking and Cloud Computing</div>
+                <div class="detail-org">Microsoft via Coursera</div>
+              </div>
+              <div class="detail-date">18 Dec 2025</div>
+            </div>
+            <a href="https://coursera.org/verify/M5EJMXWEEGH9" target="_blank" class="verify-badge-link">
+              <span>Verify: M5EJMXWEEGH9</span>
+            </a>
+          </div>
+        `
+      },
+      "m-9": {
+        title: "Cybersecurity & Threat Defense",
+        subtitle: "Endpoint Security, Cloud Hardening & Incident Response",
+        icon: "🔒",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🔒</span>
+              <span>Cybersecurity credential documents available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.networksSupport}" target="_blank" class="btn-drive-action">
+              <span>View Cyber Documents (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Foundations of Cybersecurity</div>
+                <div class="detail-org">Google via Coursera</div>
+              </div>
+              <div class="detail-date">06 Nov 2024</div>
+            </div>
+            <a href="https://coursera.org/verify/CLDER2LDGJW3" target="_blank" class="verify-badge-link">
+              <span>Verify: CLDER2LDGJW3</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Cybersecurity for Everyone</div>
+                <div class="detail-org">University of Maryland, College Park via Coursera</div>
+              </div>
+              <div class="detail-date">14 Nov 2024</div>
+            </div>
+            <a href="https://coursera.org/verify/6SC4X4JCT2FV" target="_blank" class="verify-badge-link">
+              <span>Verify: 6SC4X4JCT2FV</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Cloud Computing Security</div>
+                <div class="detail-org">Attaa Digital in partnership with Princess Nourah University (PNU)</div>
+              </div>
+              <div class="detail-date">24 Mar 2021</div>
+            </div>
+            <a href="${DRIVE_LINKS.attaaDigital}" target="_blank" class="verify-badge-link" style="background:rgba(52,168,83,0.15); border-color:#34a853; color:#86efac;">
+              <span>View Certificate on Google Drive (Attaa Section)</span>
+            </a>
+          </div>
+        `
+      },
+      "m-10": {
+        title: "Data Center Operations & IT Helpdesk",
+        subtitle: "24/7 SLA Management & Mission-Critical University Systems",
+        icon: "🖥️",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🖥️</span>
+              <span>Technical support credentials available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.networksSupport}" target="_blank" class="btn-drive-action">
+              <span>View IT Support Credentials (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Technical Support Fundamentals</div>
+                <div class="detail-org">Google via Coursera</div>
+              </div>
+              <div class="detail-date">17 Dec 2025</div>
+            </div>
+            <a href="https://coursera.org/verify/68MSRI7FGUKJ" target="_blank" class="verify-badge-link">
+              <span>Verify: 68MSRI7FGUKJ</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Essential Aspects of Software, Hardware, and Data Backup</div>
+                <div class="detail-org">Microsoft via Coursera</div>
+              </div>
+              <div class="detail-date">17 Dec 2025</div>
+            </div>
+            <a href="https://coursera.org/verify/Z7UZKSB338FD" target="_blank" class="verify-badge-link">
+              <span>Verify: Z7UZKSB338FD</span>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Introduction to Computers, Operating Systems &amp; Security</div>
+                <div class="detail-org">Microsoft via Coursera</div>
+              </div>
+              <div class="detail-date">16 Dec 2025</div>
+            </div>
+            <a href="https://coursera.org/verify/AAG0SXX770EG" target="_blank" class="verify-badge-link">
+              <span>Verify: AAG0SXX770EG</span>
+            </a>
+          </div>
+        `
+      },
+      "m-11": {
+        title: "Web Stack, Databases & System Architecture",
+        subtitle: "Technical Matrix & Hands-On Engineering Proficiencies",
+        icon: "💻",
+        content: `
+          <div class="detail-card">
+            <h4 style="color:var(--gold-bright); margin-bottom:16px;">Core Competency Proficiency Levels</h4>
+            
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Frontend Web Technologies (HTML5, CSS3, JavaScript)</span>
+                <span style="color:var(--gold-bright);">92%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:92%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Relational Databases &amp; Architecture (SQL &amp; Data Modeling)</span>
+                <span style="color:var(--gold-bright);">90%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:90%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>LAN / WAN Network Engineering &amp; Structured Cabling</span>
+                <span style="color:var(--gold-bright);">98%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:98%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Computer Laboratories &amp; Data Center Operations (24/7 SLA)</span>
+                <span style="color:var(--gold-bright);">95%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:95%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Video Conferencing Suites &amp; Smart Multimedia Classrooms</span>
+                <span style="color:var(--gold-bright);">96%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:96%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Windows Server, Active Directory Domain Services &amp; GPO</span>
+                <span style="color:var(--gold-bright);">94%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:94%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>AI Security &amp; MLOps Deployment (Google Cloud Model Armor)</span>
+                <span style="color:var(--gold-bright);">94%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:94%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>Helpdesk Ticketing &amp; SLA Management (Awn, ITIL)</span>
+                <span style="color:var(--gold-bright);">96%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:96%;"></div></div>
+            </div>
+
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-label">
+                <span>CCTV Surveillance Networks &amp; Biometric Time-Attendance</span>
+                <span style="color:var(--gold-bright);">95%</span>
+              </div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:95%;"></div></div>
+            </div>
+          </div>
+        `
+      },
+      "m-12": {
+        title: "Academic Degrees & Postgraduate Studies",
+        subtitle: "Cairo University (FGSSR), Tanta University & Mansoura University",
+        icon: "🎓",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🎓</span>
+              <span>Official academic certificates available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.academic}" target="_blank" class="btn-drive-action">
+              <span>View Academic Degrees (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Master of Science in Software Engineering (Year 1 Ongoing)</div>
+                <div class="detail-org">Faculty of Graduate Studies for Statistical Research (FGSSR) — Cairo University, Egypt</div>
+              </div>
+              <div class="detail-date">Academic Year 2026 / 2027</div>
+            </div>
+            <p>Advanced studies in distributed systems, software architecture, enterprise database design, and intelligent software engineering.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Preliminary Master's Diploma in Software Engineering</div>
+                <div class="detail-org">Faculty of Graduate Studies for Statistical Research (FGSSR) — Cairo University, Egypt</div>
+              </div>
+              <div class="detail-date">Academic Year 2025 / 2026 (Grade: Good)</div>
+            </div>
+            <p>Advanced coursework in software design methodologies, relational database management systems, and systems analysis.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">General Diploma in Education — Philosophy &amp; Sociology</div>
+                <div class="detail-org">Faculty of Education — Tanta University, Egypt</div>
+              </div>
+              <div class="detail-date">2010 (Grade: Good, 68.47%)</div>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Bachelor of Arts — Department of Philosophy</div>
+                <div class="detail-org">Faculty of Arts — Mansoura University, Egypt</div>
+              </div>
+              <div class="detail-date">May 2002 (Grade: Good, 69.65%)</div>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Industrial Technical Secondary School Diploma (3-Year System)</div>
+                <div class="detail-org">Specialization: Electrical &amp; Electronic Equipment Maintenance</div>
+              </div>
+              <div class="detail-date">1995</div>
+            </div>
+          </div>
+        `
+      },
+      "m-13": {
+        title: "ABET & NCAAA Academic Quality Accreditations",
+        subtitle: "Official Institutional Accreditations & Honors",
+        icon: "⭐",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>⭐</span>
+              <span>Official accreditation awards available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.abetHonors}" target="_blank" class="btn-drive-action">
+              <span>View Accreditation Honors (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Official Letter of Appreciation for International ABET Accreditation</div>
+                <div class="detail-org">President of Northern Border University (Prof. Dr. Ahmed Al-Rumaih)</div>
+              </div>
+              <div class="detail-date">2025</div>
+            </div>
+            <p>Official commendation recognizing the diligent efforts and fruitful participation of Mr. <strong>Mahmoud Zaher</strong> in meeting quality assurance requirements and securing <strong>ABET International Accreditation</strong> for the Information Systems program.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Official Commendation for National NCAAA Programmatic Accreditation</div>
+                <div class="detail-org">Northern Border University — National Center for Academic Accreditation &amp; Evaluation</div>
+              </div>
+              <div class="detail-date">2025</div>
+            </div>
+            <p>Recognized for critical contributions towards securing institutional <strong>NCAAA Accreditation</strong> from the Education &amp; Training Evaluation Commission.</p>
+          </div>
+        `
+      },
+      "m-14": {
+        title: "Community Impact & Non-Profit Training",
+        subtitle: "Social Responsibility & Practical Technical Empowerment",
+        icon: "🤝",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🤝</span>
+              <span>Volunteer appreciation certificates available on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.community}" target="_blank" class="btn-drive-action">
+              <span>View Volunteer Certificates (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Kafl Association for Prisoners' Care (Rafha Branch)</div>
+                <div class="detail-org">Registered No. 1999 under Ministry of Human Resources &amp; Social Development</div>
+              </div>
+              <div class="detail-date">02 Jun 2024</div>
+            </div>
+            <p>Official voluntary service certificate for conducting an intensive professional training course in <strong>"Data Entry &amp; Word Processing"</strong> for association personnel, signed by Executive Director Fahad Habib Al-Shammari.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Sehatty Health Services Association (Talaat Al-Timyat)</div>
+                <div class="detail-org">Registered No. 1259 with National Center for Non-Profit Sector</div>
+              </div>
+              <div class="detail-date">Feb &amp; Mar 2024</div>
+            </div>
+            <ul class="detail-bullets">
+              <li>Appreciation certificate for delivering "Computer Applications in Office Operations" (04 Feb 2024).</li>
+              <li>Appreciation certificate for delivering "Data Entry &amp; Text Processing" (03 Mar 2024).</li>
+            </ul>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-header">
+              <div>
+                <div class="detail-role">Al-Birr Charitable Association (Talaat Al-Timyat)</div>
+                <div class="detail-org">Registered No. 338 under Ministry of Human Resources</div>
+              </div>
+              <div class="detail-date">Feb &amp; Mar 2024</div>
+            </div>
+            <ul class="detail-bullets">
+              <li>Delivered specialized training in "Computer Applications in Business Automation" (04 Feb 2024).</li>
+              <li>Delivered advanced office productivity and data processing courses (03 Mar 2024).</li>
+            </ul>
+          </div>
+        `
+      },
+      "m-15": {
+        title: "Honors & Live Credential Verification Hub",
+        subtitle: "Official Letters of Appreciation & Instant Certificate Validation",
+        icon: "🏆",
+        content: `
+          <div class="modal-drive-banner">
+            <div class="modal-drive-banner-text">
+              <span>🏆</span>
+              <span>All official honor letters and appreciation files on Google Drive</span>
+            </div>
+            <a href="${DRIVE_LINKS.abetHonors}" target="_blank" class="btn-drive-action">
+              <span>View Honor Letters (Google Drive)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+
+          <div class="detail-card">
+            <h4 style="color:var(--gold-bright); margin-bottom:12px;">Official University Commendations</h4>
+            <ul class="detail-bullets">
+              <li><strong>NBU President Shield &amp; Commendation:</strong> Significant contributions to ABET &amp; NCAAA accreditations (2025).</li>
+              <li><strong>NBU Information Technology Deanship (Rafha):</strong> Flawless maintenance &amp; programming of university Video Conferencing suites (1434–1436H).</li>
+              <li><strong>NBU Information Technology Deanship (Rafha):</strong> Proactive campus network maintenance and lab administration (1434–1436H).</li>
+              <li><strong>NBU Deanship of Scientific Research:</strong> Technical support for the "Quality Scientific Research &amp; Publishing" symposium (1438H).</li>
+              <li><strong>College of Arts &amp; Sciences (Rafha):</strong> Continuous technical support for university student activities (1436/1437H).</li>
+              <li><strong>Deanship of Library Affairs:</strong> Unified Electronic Catalog Workshop certification (1435H).</li>
+              <li><strong>Naseej / EBSCO &amp; AskZad:</strong> Digital academic database administration training (1435H).</li>
+            </ul>
+          </div>
+
+          <div class="detail-card">
+            <h4 style="color:var(--gold-bright); margin-bottom:14px;">Instant Digital Certificate Verification Hub (Coursera &amp; Google)</h4>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:10px;">
+              <a href="https://coursera.org/verify/FP43UWR7J43M" target="_blank" class="verify-badge-link">
+                <span>AI for Everyone (DeepLearning.AI)</span>
+              </a>
+              <a href="https://coursera.org/verify/1R7C76GWI0FK" target="_blank" class="verify-badge-link">
+                <span>Computer Networks &amp; Security (IBM)</span>
+              </a>
+              <a href="https://coursera.org/verify/CLDER2LDGJW3" target="_blank" class="verify-badge-link">
+                <span>Foundations of Cybersecurity (Google)</span>
+              </a>
+              <a href="https://coursera.org/verify/68MSRI7FGUKJ" target="_blank" class="verify-badge-link">
+                <span>Technical Support Fundamentals (Google)</span>
+              </a>
+              <a href="https://coursera.org/verify/6SC4X4JCT2FV" target="_blank" class="verify-badge-link">
+                <span>Cybersecurity for Everyone (UMD)</span>
+              </a>
+              <a href="https://coursera.org/verify/8JKDOABDSVBF" target="_blank" class="verify-badge-link">
+                <span>Secure Networking (Microsoft)</span>
+              </a>
+              <a href="https://coursera.org/verify/AAG0SXX770EG" target="_blank" class="verify-badge-link">
+                <span>Computers, OS &amp; Security (Microsoft)</span>
+              </a>
+              <a href="https://coursera.org/verify/M5EJMXWEEGH9" target="_blank" class="verify-badge-link">
+                <span>Networking &amp; Cloud (Microsoft)</span>
+              </a>
+              <a href="https://coursera.org/verify/Z7UZKSB338FD" target="_blank" class="verify-badge-link">
+                <span>Hardware &amp; Data Backup (Microsoft)</span>
+              </a>
+              <a href="https://coursera.org/verify/Q66Z6AVVSW7M" target="_blank" class="verify-badge-link">
+                <span>Introduction to Computers (Microsoft)</span>
+              </a>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    /* ==========================================================================
+       MODAL CONTROLLER
+       ========================================================================== */
+    function openModal(id) {
+      const data = sectionsData[id];
+      if (!data) return;
+
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalSubtitle').innerText = data.subtitle;
+      document.getElementById('modalIcon').innerText = data.icon || "📄";
+      document.getElementById('modalBody').innerHTML = data.content;
+
+      const overlay = document.getElementById('modalOverlay');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const overlay = document.getElementById('modalOverlay');
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeModalOnOverlay(e) {
+      if (e.target.id === 'modalOverlay') {
+        closeModal();
+      }
+    }
+
+    /* ATS Modal Preview */
+    function openAtsModal() {
+      const atsHtml = document.getElementById('atsSourceDocument').innerHTML;
+      document.getElementById('atsModalContent').innerHTML = atsHtml;
+      document.getElementById('atsModalOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAtsModal() {
+      document.getElementById('atsModalOverlay').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeAtsModalOnOverlay(e) {
+      if (e.target.id === 'atsModalOverlay') {
+        closeAtsModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeAtsModal();
+      }
+    });
+
+    /* ==========================================================================
+       CATEGORY FILTER & LIVE SEARCH
+       ========================================================================== */
+    function filterCards(cat) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.section-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function searchCards() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.section-card');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    /* ==========================================================================
+       COPY CONTACT INFORMATION
+       ========================================================================== */
+    function copyContact() {
+      const text = `Mahmoud Mohamed Ibrahim Zaher\nSenior IT Support Specialist & Network Administrator\nPhone: +966565907242\nEmail: Mxz770@gmail.com\nLinkedIn: https://linkedin.com/in/mahmoud-zaher\nRafha, Northern Borders, Saudi Arabia`;
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toastMsg');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }).catch(() => {
+        alert(text);
+      });
+    }
+  </script>
+</body>
+</html>
